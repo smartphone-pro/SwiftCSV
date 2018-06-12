@@ -8,11 +8,20 @@
 
 extension String {
     var firstLine: String {
-        var index = startIndex
-        let chars = characters
-        while index < endIndex && chars[index] != "\r\n" && chars[index] != "\n" && chars[index] != "\r" {
-            index = index.successor()
-        }
-        return substringToIndex(index)
+        let endIndex = lastLineSeparator(in: self)
+        return String(self[startIndex..<endIndex])
     }
+    private func lastLineSeparator(in unis: String) -> String.Index {
+        let startIndex = unis.startIndex
+        var endIndex = unis.endIndex
+        let seperators = [Character("\r\n"),Character("\n"),Character("\r")]
+        while endIndex != startIndex {
+            if !seperators.contains(unis[unis.index(before: endIndex)]) {
+                break
+            }
+            endIndex = unis.index(before: endIndex)
+        }
+        return endIndex
+    }
+    
 }
