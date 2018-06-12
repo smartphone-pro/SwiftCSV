@@ -1,5 +1,5 @@
 # SwiftCSV
-[![Language](https://img.shields.io/badge/Swift-4-orange.svg)]()
+[![Language](https://img.shields.io/badge/Swift-4.1-orange.svg)]()
 
 _Simple CSV parsing, for OSX and iOS._
 
