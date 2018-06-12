@@ -57,7 +57,7 @@ csv.enumerateAsDict { dict in
 ### CocoaPods
 
 ```ruby
-pod "SwiftCSV"
+pod 'SwiftCSV', :git => 'https://github.com/smartphone-pro/SwiftCSV.git'
 ```
 
 ### Carthage
